@@ -1,0 +1,33 @@
+<h1>All Accounts</h1>
+<div class="formContainer">
+  <!-- <div class="ToAccountId">
+    <button (click)="refreshAccounts()">Referesh accounts</button>
+    <i class="fa fa-spinner fa-spin" *ngIf="loading"></i>
+  </div> -->
+
+  <table id="gridtable"> 
+    <thead>
+      <tr>
+        <th>Account ID</th>
+        <th>First Name</th>
+        <th>Email</th>
+        <th>Account Type</th>
+        <th>Balance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let account of accounts">
+        <td>{{ account?.id }}</td>
+        <td>{{ account?.firstName }}</td>
+        <td>{{ account?.email }}</td>
+        <td>{{ account?.accountType }}</td>
+        <td [class.zero-balance]="isZeroBalance(account)">
+          {{ account?.balance }}
+        </td>
+      </tr>
+      <tr>
+        <div *ngIf="accounts.length === 0">No records found</div>
+      </tr>
+    </tbody>
+  </table>
+</div>

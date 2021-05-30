@@ -1,0 +1,76 @@
+<!-- <h1>Account Operations</h1>
+<div class="mdl-cell mdl-cell--4-col">
+  <account-operations></account-operations>
+</div> -->
+<!-- <h1>Account Balances</h1>
+<div class="mdl-cell mdl-cell--4-col">
+ 
+  <show-accounts></show-accounts>
+</div> -->
+<br>
+<h1>New Transaction</h1>
+<br>
+<br>
+<br>
+<strong>Debit</strong>
+<select #transactionDebit>
+  <option *ngFor="let account of accounts">
+    {{account}}
+  </option>
+</select>
+<strong>Credit</strong>
+<select #transactionCredit>
+  <option *ngFor="let account of accounts">
+    {{account}}
+  </option>
+</select>
+<input type="text" #transactionDescription placeholder="description">
+<input type="date" #transactionDate placeholder="date">
+<input type="number" step=".01" #transactionAmount placeholder="amount">
+<button (click)="create(transactionDebit.value,transactionCredit.value, transactionDescription.value, transactionAmount.value*100, transactionDate.value)">Create</button>
+
+<br><br><br>
+<h1>Transactions</h1>
+<table id="gridtable">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Transaction</th>
+      <th>Debit</th>
+      <th>Credit</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let transaction of transactions">
+      <td>{{transaction.date | date:'yyyy-MM-dd'}}</td>
+      <td>{{transaction.description}}</td>
+      <td>{{transaction.debit}}</td>
+      <td>{{transaction.credit}}</td>
+      <td>{{transaction.amount | cents | currency}}</td>
+    </tr>
+    <tr>
+      <div *ngIf="transactions.length === 0">No records found</div>
+    </tr>
+  </tbody>
+</table>
+      
+<!-- 
+<h1>Balances</h1>
+<table>
+  <thead>
+    <tr>
+    <th>Account</th>
+    <th>Balance</th>
+  </tr>
+  </thead>
+  <tbody>
+
+<tr *ngFor="let item of balances | keyvalue">
+  {{item.key}} - {{item.value | cents | currency}}
+</tr>
+  </tbody>
+</table> -->
+
+<!-- <account-operations></account-operations> -->
+<!-- <show-balances></show-balances> -->

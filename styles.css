@@ -1,0 +1,211 @@
+/* Add application styles & imports to this file! */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+.bank-no-control-header {
+  padding-left: 15px;
+}
+.bank-narrow-footer {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+/* Adapted from CSS posted at https://www.npmjs.com/package/alerts */
+.alerts {
+	position: fixed;
+	z-index: 10000;
+	width: 30em;
+	top: 1em;
+	right: 1em;
+}
+
+.alerts > div {
+	padding: .8em;
+	margin-bottom: .4em;
+	background-color: lightpink;
+	cursor: default;
+  transition: opacity .2s;
+}
+
+.alerts > .alert,
+.alerts > .alert-dismiss {
+	opacity: 0;
+}
+
+.alerts > .alert-show {
+	opacity: 1;
+}
+
+
+.formContainer {
+  display:container;
+  flex:1;
+  background:#f6f6f6;
+  padding-bottom:20px;
+}
+
+.name {
+  flex:1;
+  background:#f6f6f6;
+  padding:20px 10px 0px 20px;
+}
+.AccountId {
+  flex:1;
+  background:#f6f6f6;
+  padding:20px 10px 0px 20px;
+}
+
+.Amount {
+  flex:1;
+  background:#f6f6f6;
+  padding:20px 10px 0px 20px;
+}
+.ToAccountId {
+  flex:1;
+  background:#f6f6f6;
+  padding:20px 10px 0px 20px;
+}
+
+
+.address {
+  flex:1;
+  background:#f6f6f6;
+  padding:20px 10px 0px 20px;
+}
+  
+ .email {
+  flex:1;
+  background:#f6f6f6;
+  padding:20px 10px 0px 20px;
+ }
+
+.genderContainer {
+  display:flex;
+  width:100px;
+  background:#f6f6f6;
+  padding:20px 10px 5px 20px;
+  font-size:12px;
+  height:20px;
+  text-align:center;
+  line-height:20px;
+}
+
+.male {
+  flex:1;
+  /* background:red; */
+  border-top-left-radius:3px;
+  border-bottom-left-radius:3px;
+  cursor:pointer;
+  color:#ffffff;
+  font-size:10px;
+}
+
+.female {
+  flex:1;
+  /* background:blue; */
+  border-top-right-radius:3px;
+  border-bottom-right-radius:3px;
+  cursor:pointer;
+  color:#ffffff;
+  font-size:10px;
+}
+
+.submitBtn {
+  border:none;
+  background:grey;
+  color:#dddddd;
+  width:100px;
+  height:24px;
+  font-size:12px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.btnContainer {
+  flex:1;
+  background:#f6f6f6;
+  padding:20px 10px 0px 20px;
+}
+
+
+#gridtable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#gridtable td, #gridtable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#gridtable tr:nth-child(even){background-color: #f2f2f2;}
+
+#gridtable tr:hover {background-color: #ddd;}
+
+#gridtable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+html, body, div, span, applet, object, iframe,
+ blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+li {
+  border-radius: 25px;
+  /* background: #73AD21; */
+  padding: 20px;
+  /* width: 200px;
+  height: 150px; */
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}

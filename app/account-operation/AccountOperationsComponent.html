@@ -1,0 +1,144 @@
+<div>
+  <h1>Account Operations</h1>
+  <br />
+  <h2>Core feature goals</h2>
+  
+    <li>Create and close accounts</li>
+    <li>View account balances</li>
+    <li>Ability to deposit, withdraw, and transfer account funds</li>
+
+</div>
+<div class="formContainer">
+  <div class="name">
+    <input type="text" placeholder="Name" name="name" [(ngModel)]="firstName" />
+  </div>
+
+  <!-- <div class="address">
+    <input type="text"
+           placeholder="Address"
+           name="address"
+           [(ngModel)]="address">
+  </div> -->
+
+  <div class="email">
+    <input type="text" placeholder="Email" name="email" [(ngModel)]="email" />
+  </div>
+  <div class="AccountId">
+    <!-- <label class="mdl-textfield__label" for="accountId"
+      >From AccountId...</label
+    > -->
+    <input
+      placeholder="From AccountId"
+      class="mdl-textfield__input"
+      [(ngModel)]="accountId"
+      type="text"
+      id="accountId"
+    />
+  </div>
+
+  <div class="Amount">
+    <!-- <label class="mdl-textfield__label" for="amount">Amount...</label -->
+    <input
+      placeholder="Amount"
+      class="mdl-textfield__input"
+      [(ngModel)]="amount"
+      type="number"
+      pattern="[0-9]*"
+      id="amount"
+    />
+    <span class="mdl-textfield__error">Amount must be a whole number.</span>
+  </div>
+  <br />
+
+  <label>Account type</label>
+  <div class="genderContainer">
+    <div
+      class="male"
+      (click)="Saving()"
+      [ngStyle]="{'backgroundColor': btnClickedMale ? '#0543a5': '#dddddd'}"
+    >
+      Saving
+    </div>
+    <div
+      class="female"
+      (click)="Current()"
+      [ngStyle]="{'backgroundColor': btnClickedFemale ? '#0543a5': '#dddddd'}"
+    >
+      Current
+    </div>
+  </div>
+</div>
+<br />
+
+<button
+  class="
+    mdl-button mdl-js-button
+    mdl-button--raised
+    mdl-js-ripple-effect
+    bank-button
+  "
+  (click)="openAccount()"
+  [disabled]="openAccountProhibited"
+>
+  Open Account
+</button>
+
+<button
+  class="
+    mdl-button mdl-js-button
+    mdl-button--raised
+    mdl-js-ripple-effect
+    bank-button
+  "
+  (click)="closeAccount()"
+  [disabled]="closeAccountProhibited"
+>
+  Close Account
+</button>
+
+<br />
+
+<br />
+
+<button
+  class="
+    mdl-button mdl-js-button
+    mdl-button--raised
+    mdl-js-ripple-effect
+    bank-button
+  "
+  (click)="deposit()"
+  [disabled]="depositProhibited"
+>
+  Deposit
+</button>
+
+<button
+  class="
+    mdl-button mdl-js-button
+    mdl-button--raised
+    mdl-js-ripple-effect
+    bank-button
+  "
+  (click)="withdraw()"
+  [disabled]="withdrawProhibited"
+>
+  Withdraw
+</button>
+<br />
+<br />
+<br />
+<h2>Money TRANSFER</h2>
+<div class="ToAccountId">
+  <!-- <label class="mdl-textfield__label" for="transferToAccountId"
+    >To Account Id...</label
+  > -->
+  <input
+    placeholder="To Account Id"
+    class="mdl-textfield__input"
+    [(ngModel)]="transferToAccountId"
+    type="text"
+    id="transferToAccountId"
+  />
+  <button (click)="transfer()" [disabled]="transferProhibited">Transfer</button>
+</div>
